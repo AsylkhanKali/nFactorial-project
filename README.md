@@ -32,11 +32,6 @@ Navigate to the project directory:
 
 Copy code
 cd yourproject
-Install the required dependencies:
-
-Copy code
-pip install -r requirements.txt
-
 
 Apply the migrations: 
 Copy code
