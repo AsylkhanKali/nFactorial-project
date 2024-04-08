@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+<div class="filter-search">
+    <form method="get" class="category-filter">
+        <select name="category" onchange="this.form.submit()">
+            <option value="">All Categories</option>
+            {% for category in categories %}
+            <option value="{{ category.id }}" {% if current_category_id == category.id %}selected{% endif %}>
+                {{ category.name }}
+            </option>
+            {% endfor %}
+        </select>
+    </form>
+
+    <form method="get" class="search-bar">
+        <input type="text" name="q" placeholder="Search news..." value="{{ query }}">
+        <button type="submit">Search</button>
+    </form>
+</div>
+
+<div class="news-grid">
+    {% for post in page_obj %}
+    <div class="news-item">
+        <div class="news-item-image" style="background-image: url('{{ post.image.url }}');"></div>
+        <div class="news-item-content">
+            <p class="category-name">{{ post.category.name }}</p>
+            <h2><a href="{% url 'news-detail' post.pk %}">{{ post.title }}</a></h2>
+            <p>{{ post.date_posted }} at {{ post.time_posted }}</p>
+            <p>Views: {{ post.views }} | Comments: {{ post.comments.all.count }}</p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<div class="pagination">
+    {% if page_obj.has_previous %}
+        <a href="?page=1">&laquo; First</a>
+        <a href="?page={{ page_obj.previous_page_number }}">Previous</a>
+    {% endif %}
+
+    {% for num in page_obj.paginator.page_range %}
+        {% if page_obj.number == num %}
+            <span>{{ num }}</span>
+        {% else %}
+            <a href="?page={{ num }}">{{ num }}</a>
+        {% endif %}
+    {% endfor %}
+
+    {% if page_obj.has_next %}
+        <a href="?page={{ page_obj.next_page_number }}">Next</a>
+        <a href="?page={{ page_obj.paginator.num_pages }}">Last &raquo;</a>
+    {% endif %}
+</div>
+
+{% endblock %}
