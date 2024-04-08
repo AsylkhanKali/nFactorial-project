@@ -29,24 +29,24 @@ Before you begin, ensure you have the following installed:
    git clone https://yourrepository.com/yourproject.git
 Save to grepper
 Navigate to the project directory:
-sh
+
 Copy code
 cd yourproject
 Install the required dependencies:
-sh
+
 Copy code
 pip install -r requirements.txt
 Apply the migrations:
-sh
+
 Copy code
 python manage.py makemigrations
 python manage.py migrate
 Create a superuser:
-sh
+
 Copy code
 python manage.py createsuperuser
 Run the development server:
-sh
+
 Copy code
 python manage.py runserver
 Open your browser and go to http://127.0.0.1:8000/ to view the project.
