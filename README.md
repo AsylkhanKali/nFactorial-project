@@ -50,5 +50,12 @@ python manage.py createsuperuser
 
 Run the development server:
 Copy code
+
 python manage.py runserver
 Open your browser and go to http://127.0.0.1:8000/ to view the project.
+
+<img width="862" alt="Screenshot 2024-04-09 at 02 39 53" src="https://github.com/Asylkhan689/nFactorial-project/assets/119470359/59f9b775-9473-4075-92e3-f89a174948b0">
+
+
+![Uploading Screenshot 2024-04-09 at 02.39.53.png…]()
+
