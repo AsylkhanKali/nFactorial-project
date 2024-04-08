@@ -59,3 +59,5 @@ Open your browser and go to http://127.0.0.1:8000/ to view the project.
 
 <img width="863" alt="Screenshot 2024-04-09 at 02 41 33" src="https://github.com/Asylkhan689/nFactorial-project/assets/119470359/4b60b5e3-a7ad-4181-b94a-a5b4db4ee381">
 
+<img width="860" alt="Screenshot 2024-04-09 at 03 13 58" src="https://github.com/Asylkhan689/nFactorial-project/assets/119470359/290a05ae-3b44-4128-86e8-0a9b99f00821">
+
