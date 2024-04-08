@@ -37,18 +37,18 @@ Install the required dependencies:
 Copy code
 pip install -r requirements.txt
 
-Copy code
-Apply the migrations:
 
+Apply the migrations: 
 Copy code
-python manage.py makemigrations
-python manage.py migrate
-Create a superuser:
+python manage.py makemigrations    
 
+python manage.py migrate     
+
+Create a superuser: 
 Copy code
-python manage.py createsuperuser
+python manage.py createsuperuser   
+
 Run the development server:
-
 Copy code
 python manage.py runserver
 Open your browser and go to http://127.0.0.1:8000/ to view the project.
