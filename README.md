@@ -1,4 +1,4 @@
-# nFactorial-project
+# News Website - nFactorial-project
 # Django News Website
 
 This Django project is a simple news website that displays news posts in a grid, with features for filtering by category, searching, commenting, and pagination.
